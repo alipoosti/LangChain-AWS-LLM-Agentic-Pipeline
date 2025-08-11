@@ -43,9 +43,3 @@ coverage.xml
 
 # macOS
 .DS_Store
-
-# Output files
-test_paper_summary.md
-
-# PDF files (optional, if you don't want to commit large PDFs)
-test_paper.pdf
