@@ -56,6 +56,7 @@ The pipeline consists of the following agents:
 - **PaperSummaryWriterAgent**: Compiles all extracted information into a comprehensive markdown summary.
 
 A visual representation of the pipeline is available in `pipeline.jpg`.
+![Pipeline](pipeline.jpg)
 
 ## Example Usage
 
