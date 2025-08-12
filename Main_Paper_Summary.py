@@ -70,7 +70,10 @@ def RunPaperSummaryPipeline(pdf_file: str):
     paper_summary = summary_agent.compile_summary(authors, abstract, title, intro_summary, conclusion_summary)
 
     # Save summary to markdown file
-    output_md = "test_paper_summary.md"
+    parent_path = os.path.dirname(pdf_file) # Get the parent directory of the PDF file
+    base_name = os.path.basename(pdf_file) # Get the base name (file name with extension)
+    file_name, _ = os.path.splitext(base_name) # Remove the extension
+    output_md = os.path.join(parent_path, f"{file_name}_summary.md") # Create the new markdown file path
     save_summary_to_md(paper_summary, output_md)
     print(f"Paper summary saved to {output_md}")
 
